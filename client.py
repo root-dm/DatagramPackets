@@ -22,7 +22,7 @@ threading.Thread(target=listener).start()
 
 message = input("\x1b[6;30;42mEpiloges:\x1b[0m \n Signin <username>\n-> ")
 while not message.startswith('Signin'):
-    message = input("\x1b[6;30;42mEpiloges:\x1b[0m \n Signin <username>\n-> ")
+    message = input("\x1b[6;30;42mEpilogess:\x1b[0m \n Signin <username>\n-> ")
 
 client_socket.send(message.encode())
 print ("\x1b[6;30;42mEpiloges:\x1b[0m \n Signout\n Message <message>\n")
