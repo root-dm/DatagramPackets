@@ -12,7 +12,6 @@ def listener():
             
 
 host = socket.gethostname()
-print (host)
 port = 5000
 
 
