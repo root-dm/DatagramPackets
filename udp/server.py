@@ -41,10 +41,10 @@ def new_client(message, caddr):
                 callback_message="\033[1m"+user["name"]+":\033[0m "+message
 
         for user in registered:
-            if user["ip"] != caddr:
-                server_socket.sendto(callback_message.encode(), user["ip"])
-                cnt_received+=1
-                delivered=True
+            # if user["ip"] != caddr:
+            server_socket.sendto(callback_message.encode(), user["ip"])
+            cnt_received+=1
+            delivered=True
         if cnt_received==0:
             msg="\n\033[91m(!)\033[0m No users online\n"
             server_socket.sendto(msg.encode(), caddr)
